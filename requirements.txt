@@ -4,3 +4,4 @@ pillow==8.3.2
 numpy==1.16.5
 streamlit==0.81.1
 Pyrebase==3.0.0
+pillow==8.3.2
