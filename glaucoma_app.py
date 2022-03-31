@@ -39,10 +39,10 @@ password = st.sidebar.text_input('Please enter your password', type='password')
 
 # App
 
-# Sign up Block
+
 # Sign up Block
 if choice == 'Sign up':
-    Username = st.sidebar.text_input(
+    handle = st.sidebar.text_input(
         'Please input your app handle name', value='Default')
     submit = st.sidebar.button('Create my account')
 
@@ -52,10 +52,11 @@ if choice == 'Sign up':
         st.balloons()
         # Sign in
         user = auth.sign_in_with_email_and_password(email, password)
-        db.child(user['localId']).child("Handle").set(Username)
+        db.child(user['localId']).child("Handle").set(handle)
         db.child(user['localId']).child("ID").set(user['localId'])
-        st.title('Welcome' + Username)
+        st.title('Welcome' + handle)
         st.info('Login via login drop down selection')
+        
 
 # Login Block
 if choice == 'Login':
