@@ -36,6 +36,10 @@ choice = st.sidebar.selectbox('login/Signup', ['Login', 'Sign up'])
 # Obtain User Input for email and password
 email = st.sidebar.text_input('Please enter your email address')
 password = st.sidebar.text_input('Please enter your password', type='password')
+if email is None:
+    st.warning('please provide an email')
+elif password is None:
+    st.warning('please provide a password')
 
 # App
 
