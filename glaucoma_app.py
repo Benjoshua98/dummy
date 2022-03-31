@@ -39,7 +39,7 @@ password = st.sidebar.text_input('Please enter your password', type='password')
 
 # App
 
-
+# Sign up Block
 # Sign up Block
 if choice == 'Sign up':
     handle = st.sidebar.text_input(
@@ -56,11 +56,10 @@ if choice == 'Sign up':
         db.child(user['localId']).child("ID").set(user['localId'])
         st.title('Welcome' + handle)
         st.info('Login via login drop down selection')
-        
 
 # Login Block
 if choice == 'Login':
-    login = st.sidebar.button('Login')
+    login = st.sidebar.checkbox('Login')
     if login:
         user = auth.sign_in_with_email_and_password(email, password)
         st.write('<style>div.row-widget.stRadio > div{flex-direction:row;}</style>', unsafe_allow_html=True)
@@ -120,7 +119,7 @@ if choice == 'Login':
 
 
         else:
-            st.header("Hurray!")
+            st.header(":Hurray!")
 
             contact_form = """
             <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeuLuq6uGp0oZ3JMQ_6WdN5cMquDJfDwtlRKY7HAsGtNRNhww/viewform?embedded=true" width="740" height="909" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe></form>
