@@ -42,7 +42,7 @@ password = st.sidebar.text_input('Please enter your password', type='password')
 # Sign up Block
 # Sign up Block
 if choice == 'Sign up':
-    handle = st.sidebar.text_input(
+    Username = st.sidebar.text_input(
         'Please input your app handle name', value='Default')
     submit = st.sidebar.button('Create my account')
 
@@ -52,14 +52,14 @@ if choice == 'Sign up':
         st.balloons()
         # Sign in
         user = auth.sign_in_with_email_and_password(email, password)
-        db.child(user['localId']).child("Handle").set(handle)
+        db.child(user['localId']).child("Handle").set(Username)
         db.child(user['localId']).child("ID").set(user['localId'])
-        st.title('Welcome' + handle)
+        st.title('Welcome' + Username)
         st.info('Login via login drop down selection')
 
 # Login Block
 if choice == 'Login':
-    login = st.sidebar.checkbox('Login')
+    login = st.sidebar.button('Login')
     if login:
         user = auth.sign_in_with_email_and_password(email, password)
         st.write('<style>div.row-widget.stRadio > div{flex-direction:row;}</style>', unsafe_allow_html=True)
@@ -119,5 +119,10 @@ if choice == 'Login':
 
 
         else:
-            print('Feedback')
+            st.header("Hurray!")
 
+            contact_form = """
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeuLuq6uGp0oZ3JMQ_6WdN5cMquDJfDwtlRKY7HAsGtNRNhww/viewform?embedded=true" width="740" height="909" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe></form>
+            """
+
+            st.markdown(contact_form, unsafe_allow_html=True)
