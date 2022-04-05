@@ -66,7 +66,7 @@ if choice == 'Login':
         # SETTINGS PAGE
         if bio == 'Home':
             # CHECK FOR IMAGE
-            st.title('glaucoma')
+            print('glaucoma')
         # HOME PAGE
         elif bio == 'Glaucoma App':
             st.set_option('deprecation.showfileUploaderEncoding', False)
@@ -124,3 +124,6 @@ if choice == 'Login':
                     """
 
             st.markdown(contact_form, unsafe_allow_html=True)
+            
+    else:
+        st.write('enter valid email address or password')
