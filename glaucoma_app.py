@@ -66,7 +66,7 @@ if choice == 'Login':
         # SETTINGS PAGE
         if bio == 'Home':
             # CHECK FOR IMAGE
-            print('glaucoma')
+            st.title('glaucoma')
         # HOME PAGE
         elif bio == 'Glaucoma App':
             st.set_option('deprecation.showfileUploaderEncoding', False)
