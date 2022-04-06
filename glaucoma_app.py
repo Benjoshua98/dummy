@@ -40,8 +40,6 @@ password = st.sidebar.text_input('Please enter your password', type='password')
 
 # Sign up Block
 if choice == 'Sign up':
-    email = st.sidebar.text_input('Please enter your email address')
-    password = st.sidebar.text_input('Please enter your password', type='password')
     handle = st.sidebar.text_input(
         'Please input your app handle name', value='Default')
     submit = st.sidebar.button('Create my account')
@@ -59,8 +57,6 @@ if choice == 'Sign up':
 
 # Login Block
 if choice == 'Login':
-    email = st.sidebar.text_input('Please enter your email address')
-    password = st.sidebar.text_input('Please enter your password', type='password')
     login = st.sidebar.checkbox('Login')
     if login:
         user = auth.sign_in_with_email_and_password(email, password)
