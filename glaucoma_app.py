@@ -68,7 +68,7 @@ if choice == 'Login':
         # SETTINGS PAGE
         if bio == 'Home':
             # Find more emojis here: https://www.webfx.com/tools/emoji-cheat-sheet/
-            st.set_page_config(layout="wide")
+            
 
 
             def load_lottieurl(url):
