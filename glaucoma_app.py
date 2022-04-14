@@ -5,6 +5,7 @@ import tensorflow as tf
 from PIL import Image, ImageOps
 import numpy as np
 import requests
+import time
 
 from streamlit_lottie import st_lottie
 from PIL import Image
