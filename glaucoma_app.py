@@ -182,13 +182,13 @@ if choice == 'Login':
 
             model = tf.keras.models.load_model('my_model2.h5')
 
-            st.write("""
+            st.title("""
                                      # ***Glaucoma detector***
                                      """
                      )
 
-            st.write("This is a simple image classification web app to predict glaucoma through fundus image of eye")
-            st.write("[dataset >](https://drive.google.com/drive/folders/1HHW-m4BzEPPURStyQA2TzWkurRKRghE3?usp=sharing)")
+            st.header("This is a simple image classification web app to predict glaucoma through fundus image of eye")
+            st.subheader("[Testdataset >](https://drive.google.com/drive/folders/1HHW-m4BzEPPURStyQA2TzWkurRKRghE3?usp=sharing)")
 
             file = st.file_uploader("Please upload an image(jpg) file", type=["jpg"])
 
