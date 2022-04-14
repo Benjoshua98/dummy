@@ -111,8 +111,7 @@ if choice == 'Login':
                 col1, col2 = st.columns((2, 1))
                 with col2:
                     st.write("---")
-                    st.write("##")
-                    st.write("##")
+                    
                     st.subheader("Normal")
                     st.subheader("vs")
                     st.subheader("Glaucoma eye")
