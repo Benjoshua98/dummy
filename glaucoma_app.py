@@ -188,6 +188,7 @@ if choice == 'Login':
                      )
 
             st.write("This is a simple image classification web app to predict glaucoma through fundus image of eye")
+            st.write("[dataset >](https://drive.google.com/drive/folders/1HHW-m4BzEPPURStyQA2TzWkurRKRghE3?usp=sharing)")
 
             file = st.file_uploader("Please upload an image(jpg) file", type=["jpg"])
 
@@ -208,7 +209,7 @@ if choice == 'Login':
                                              ## **Prediction:** You are affected by Glaucoma. Please consult an ophthalmologist as soon as possible.
                                              """
                              )
-              st.write("[dataset >](https://drive.google.com/drive/folders/1HHW-m4BzEPPURStyQA2TzWkurRKRghE3?usp=sharing)")
+              
 
 
 
