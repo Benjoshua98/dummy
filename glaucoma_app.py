@@ -4,8 +4,10 @@ import streamlit as st
 import tensorflow as tf
 from PIL import Image, ImageOps
 import numpy as np
+import requests
 
-
+from streamlit_lottie import st_lottie
+from PIL import Image
 from datetime import datetime
 
 # Configuration Key
@@ -65,8 +67,104 @@ if choice == 'Login':
 
         # SETTINGS PAGE
         if bio == 'Home':
-            # CHECK FOR IMAGE
-            print('glaucoma')
+            # Find more emojis here: https://www.webfx.com/tools/emoji-cheat-sheet/
+            st.set_page_config(page_title="My Webpage", page_icon=":tada:", layout="wide")
+
+
+            def load_lottieurl(url):
+                r = requests.get(url)
+                if r.status_code != 200:
+                    return None
+                return r.json()
+
+
+            # Use local CSS
+            def local_css(file_name):
+                with open(file_name) as f:
+                    st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
+
+
+            local_css("style.css")
+
+            # ---- LOAD ASSETS ----
+            lottie_coding = load_lottieurl("https://assets1.lottiefiles.com/packages/lf20_xa0q7ly3.json")
+            # Welcome
+            st.title('Welcome to Mission Glaucoma')
+            with st.container():
+                st.write("---")
+                left_column, right_column = st.columns(2)
+                with left_column:
+                    st.header("No object is mysterious and the mystery is your Eye ")
+                with right_column:
+                    st_lottie(lottie_coding, height=300, key="coding")
+
+            # ---- HEADER SECTION ----
+            with st.container():
+                st.write("---")
+                st.header('what is Glaucoma')
+                st.subheader(
+                    "- an **_eye_** **_problem_** that affects the **_retina_** and **_weakens the nerve cells_** that assist in visual recognition.")
+                st.subheader("- The second highest cause of Irreversible blindness in the world.")
+                st.subheader("- Doesn’t have a permanent cure.")
+
+                st.write("[Learn More >](https://www.glaucomapatients.org/)")
+                col1, col2 = st.columns((2, 1))
+                with col2:
+                    st.write("---")
+                    st.write("##")
+                    st.write("##")
+                    st.subheader("Normal")
+                    st.subheader("vs")
+                    st.subheader("Glaucoma eye")
+                with col1:
+                    st.image("images/img2.jpg")
+                # st.columns
+                # st.image("images/img2.jpg",width=500, caption='Normal vs Glaucoma eye')
+
+            # ---- content 1 ----
+            with st.container():
+                st.write("---")
+                left_column, right_column = st.columns(2)
+                with left_column:
+                    with left_column:
+                        st.header("What glaucoma does")
+
+                        st.write("##")
+                        st.write(
+                            """
+                            - Glaucoma is usually, but not always, the result of abnormally high pressure inside your eye called Intraocular Pressure (IOP) .
+                            - Slowly damages optic nerve.
+                            - Glaucoma initially has no symptoms.
+                            - At some point, side (peripheral) vision is lost.
+                            - If untreated, an individual can become totally blind for the lifetime.
+                            so, Early Detection is the best possible treatment.
+                            """
+                        )
+                        st.write("[.... >](https://www.glaucomapatients.org/basic/definition/)")
+                        with right_column:
+                            st.header("watch video")
+
+                            st.video("video/vid.mp4", format="video/mp4")
+
+            ## statistics
+
+            images1 = ['stat/glaucomastats.png',
+                       'stat/Fig1Projected prevalence of glaucoma.png',
+                       'stat/Fig2 Age-specific prevalence of diagnosed glaucoma in 2018.png',
+                       'stat/Fig3 gender-specific prevalence of diagnosed glaucoma in 2018.png',
+                       ]
+            images2 = ['stat/Fig4 Race-specific prevalence of diagnosed glaucoma in 2018.png',
+                       'stat/Fig5 Age-specific prevalence of diagnosed glaucoma by ethnic groups in 2018.png',
+                       'stat/Fig6 Future projections of POAG glaucoma.png']
+            with st.container():
+                st.write("---")
+                st.header('Statistics')
+                left_column, right_column = st.columns(2)
+                with left_column:
+                    st.image(images1, use_column_width=True, caption=images1)
+                with right_column:
+                    st.image(images2, use_column_width=True, caption=images2)
+
         # HOME PAGE
         elif bio == 'Glaucoma App':
             st.set_option('deprecation.showfileUploaderEncoding', False)
@@ -124,6 +222,6 @@ if choice == 'Login':
                     """
 
             st.markdown(contact_form, unsafe_allow_html=True)
-            
+
     else:
         st.write('enter valid email address or password')
