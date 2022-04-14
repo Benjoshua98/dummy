@@ -51,8 +51,8 @@ if login:
     user = auth.sign_in_with_email_and_password(email, password)
     with st.spinner('Wait for it...'):
         time.sleep(5)
-    st.success('Done!')
-    st.snow()
+    st.success('logged in!')
+    #st.snow()
 
     st.write('<style>div.row-widget.stRadio > div{flex-direction:row;}</style>', unsafe_allow_html=True)
     bio = st.radio('Jump to', ['Home', 'Glaucoma App', 'Feedback'])
@@ -204,7 +204,7 @@ if login:
 
 
     else:
-        st.header(":Hurray!")
+        st.header("Hurray! Welcome to feedback section")
 
         contact_form = """
                     <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeuLuq6uGp0oZ3JMQ_6WdN5cMquDJfDwtlRKY7HAsGtNRNhww/viewform?embedded=true" width="740" height="909" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe></form>
