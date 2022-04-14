@@ -13,14 +13,14 @@ from datetime import datetime
 # Configuration Key
 
 firebaseConfig = {
-    'apiKey': "AIzaSyDqUAr_p-wtYllNKJVo9TSE2_M09BogoRQ",
-    'authDomain': "ggjj-71999.firebaseapp.com",
-    'projectId': "ggjj-71999",
-    'databaseURL': "https://ggjj-71999-default-rtdb.europe-west1.firebasedatabase.app/",
-    'storageBucket': "ggjj-71999.appspot.com",
-    'messagingSenderId': "573736506534",
-    'appId': "1:573736506534:web:6e304a426db46c78409067",
-    'measurementId': "G-RX6H2PF96D"
+    'apiKey': "AIzaSyD2Evc1iBwghGCUwSFhBruaTMOWU9sehnA",
+    'authDomain': "glaucoma-ben.firebaseapp.com",
+    'projectId': "glaucoma-ben",
+    'databaseURL': "https://glaucoma-ben-default-rtdb.europe-west1.firebasedatabase.app/",
+    'storageBucket': "glaucoma-ben.appspot.com",
+    'messagingSenderId': "638260342283",
+    'appId': "1:638260342283:web:4dc7f8773c407d2276a10e",
+    'measurementId': "G-HPNTPZRMWC"
 }
 # Firebase Authentication
 firebase = pyrebase.initialize_app(firebaseConfig)
