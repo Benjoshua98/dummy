@@ -46,7 +46,7 @@ password = st.sidebar.text_input('Please enter your password', type='password')
 
 
 # Login Block
-if choice == 'Login':
+
     login = st.sidebar.button('Login')
     if login:
         user = auth.sign_in_with_email_and_password(email, password)
