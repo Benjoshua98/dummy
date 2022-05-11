@@ -38,7 +38,7 @@ choice = st.sidebar.selectbox('login/Signup', ['Login', 'Sign up'])
 # Obtain User Input for email and password
 email = st.sidebar.text_input('Please enter your email address')
 password = st.sidebar.text_input('Please enter your password', type='password')
-
+st.sidebar.write('Tick the login box as database is a free version one the premiuim features are not in use')
 # App
 
 # Sign up Block
