@@ -116,6 +116,7 @@ if choice == 'Login':
                     st.subheader("Glaucoma eye")
                 with col1:
                     st.image("images/img2.jpg")
+                st.write("[Image Credits >](https://tinyurl.com/bew12155)")
                 # st.columns
                 # st.image("images/img2.jpg",width=500, caption='Normal vs Glaucoma eye')
 
