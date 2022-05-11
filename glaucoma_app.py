@@ -219,7 +219,7 @@ if choice == 'Login':
 
 
         else:
-            st.header("Hurray! Welcome to feedback section")
+            st.header("Welcome to feedback section")
 
             contact_form = """
                             <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeuLuq6uGp0oZ3JMQ_6WdN5cMquDJfDwtlRKY7HAsGtNRNhww/viewform?embedded=true" width="740" height="909" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe></form>
