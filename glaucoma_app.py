@@ -96,6 +96,7 @@ if choice == 'Login':
                     st.header("No object is mysterious and the mystery is your Eye ")
                 with right_column:
                     st_lottie(lottie_coding, height=300, key="coding")
+            st.write("[Animation Credits >](https://lottiefiles.com/search?q=eye&category=animations)")
 
             # ---- HEADER SECTION ----
             with st.container():
