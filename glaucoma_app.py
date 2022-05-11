@@ -50,7 +50,7 @@ if choice == 'Sign up':
 
     if submit:
         user = auth.create_user_with_email_and_password(email, password)
-        st.success('Your account is created suceesfully!')
+        st.success('Your account is created successfully!')
         st.balloons()
         # Sign in
         user = auth.sign_in_with_email_and_password(email, password)
@@ -68,7 +68,7 @@ if choice == 'Login':
         bio = st.radio('Jump to', ['Home', 'Glaucoma App', 'Feedback'])
         # SETTINGS PAGE
         if bio == 'Home':
-            # Find more emojis here: https://www.webfx.com/tools/emoji-cheat-sheet/
+
 
             def load_lottieurl(url):
                 r = requests.get(url)
@@ -100,9 +100,9 @@ if choice == 'Login':
             # ---- HEADER SECTION ----
             with st.container():
                 st.write("---")
-                st.header('what is Glaucoma')
+                st.header('What is Glaucoma?')
                 st.subheader(
-                    "- an **_eye_** **_problem_** that affects the **_retina_** and **_weakens the nerve cells_** that assist in visual recognition.")
+                    "- a **_group_** of **_eye_** **_diseases_** that affects the **_retina_** and **_weakens the nerve cells_** that assist in visual recognition.")
                 st.subheader("- The second highest cause of Irreversible blindness in the world.")
                 st.subheader("- Doesn’t have a permanent cure.")
 
@@ -183,12 +183,12 @@ if choice == 'Login':
             model = tf.keras.models.load_model('my_model2.h5')
 
             st.title("""
-                                     # ***Glaucoma detector***
+                                     # ***GlaucoCheck***
                                      """
                      )
 
-            st.header("This is a simple image classification web app to predict glaucoma through fundus image of eye")
-            st.subheader("[Testdataset >](https://drive.google.com/drive/folders/1HHW-m4BzEPPURStyQA2TzWkurRKRghE3?usp=sharing)")
+            st.header("Welcome to glaucoCheck Check your eye here.")
+
 
             file = st.file_uploader("Please upload an image(jpg) file", type=["jpg"])
 
@@ -200,16 +200,16 @@ if choice == 'Login':
                 pred = prediction[0][0]
                 if (pred > 0.5):
                     st.write("""
-                                             ## **Prediction:** You eye is Healthy. Great!!
+                                             ## **Prediction:** The Person's eye is Healthy. Great!! Tested Negative for Glaucoma
                                              """
                              )
                     st.balloons()
                 else:
                     st.write("""
-                                             ## **Prediction:** You are affected by Glaucoma. Please consult an ophthalmologist as soon as possible.
+                                             ## **Prediction:** The Person is affected by Glaucoma. Please consult an ophthalmologist as soon as possible. Tested Positve for Glaucoma
                                              """
                              )
-              
+
 
 
 
@@ -222,4 +222,3 @@ if choice == 'Login':
                             """
 
             st.markdown(contact_form, unsafe_allow_html=True)
-
