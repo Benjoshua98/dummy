@@ -162,6 +162,7 @@ if choice == 'Login':
                     st.image(images1, use_column_width=True, caption=images1)
                 with right_column:
                     st.image(images2, use_column_width=True, caption=images2)
+                st.write("[Learn More >](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7769798/)")
 
         # HOME PAGE
         elif bio == 'Glaucoma App':
@@ -187,7 +188,7 @@ if choice == 'Login':
                                      """
                      )
 
-            st.header("Welcome to glaucoCheck Check your eye here.")
+            st.header("Welcome to glaucoCheck. Check your eye here.")
 
 
             file = st.file_uploader("Please upload an image(jpg) file", type=["jpg"])
