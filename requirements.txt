@@ -1,0 +1,8 @@
+altair==4.1.0
+click==7.1.2
+streamlit==0.87.0
+pyrebase==3.0.27
+tensorflow==2.5.0
+Pillow==8.2.0
+requests==2.26.0
+streamlit-lottie==0.2.0
