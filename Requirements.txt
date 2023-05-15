@@ -1,9 +1,9 @@
+Pyrebase==3.0.0
 click>=7.0,<8.0
 numpy
 protobuf==3.20.1
 tensorflow==2.3.0
 pillow==8.3.2
-Pyrebase==3.0.0
 requests==2.24.0
 streamlit-lottie==0.2.1
 altair==4.1.0
